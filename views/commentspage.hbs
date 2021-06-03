@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Results</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
+		<style>
+			.floatright{
+				float:right;
+			}
+			.imageicon{
+				height: 150px;
+				width: 150 px;
+				float: left;
+				padding-bottom: 20px;
+			}
+			.component {
+				position: relative;
+				font-style: italic;
+				font-weight: bold;
+				font-size: 18px;
+				text-align: right;
+				padding: 0 26px 0 0;
+				width: 150px;
+				float: left;
+				height: 100px;
+			}
+			.rating {
+				padding-left:20x;
+			}
+			.button {
+				position: relative;
+				padding-bottom: 10px;
+				margin-top: 10px;
+				clear: both;
+				font-size: 0.7em;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					{{> header fName=fName lName=lName}}
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/aboutUs">About Us</a></li>
+							<li><a href="/myAccount/{{number}}">My Account</a></li>
+							<li><a href="/logout">Sign Out</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Comments</h1>
+
+							<dl>
+								<div class="inner">
+									<section>
+									<h2>Get in touch</h2>
+									<form id = "commentForm" method="POST">
+										<div class="container">
+										
+											<label for="message"><b>Message</b></label>
+											<input type="text" placeholder="Message" name="message" id= "cmessage" required>
+
+										</div>
+								
+										<ul class="actions">
+											<li><input type="submit" id="csubmit" class="primary"></li>
+										</ul>
+									</form>
+								</div>
+								
+								<p id="error"></p>
+								<div id = "comments">
+									{{#each commentsdb}}
+										{{> comment}}
+									{{/each}}
+								</div>
+							</dl>					
+						
+
+						<!-- Footer -->
+						
+						</div>
+						{{> footer}}
+				</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../js/jquery.min.js"></script>
+			<script src="../js/browser.min.js"></script>
+			<script src="../js/breakpoints.min.js"></script>
+			<script src="../js/util.js"></script>
+			<script src="../js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Order</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
+		<style>
+			.floatright{
+				float:right;
+			}
+			.imageicon{
+				height: 150px;
+				width: 150 px;
+				float: left;
+				padding-bottom: 20px;
+			}
+			.component {
+				position: relative;
+				font-style: italic;
+				font-weight: bold;
+				font-size: 18px;
+				text-align: right;
+				padding: 0 26px 0 0;
+				width: 150px;
+				float: left;
+				height: 100px;
+			}
+			.rating {
+				padding-left:20x;
+			}
+			.button {
+				position: relative;
+				padding-bottom: 10px;
+				margin-top: 10px;
+				clear: both;
+				font-size: 0.7em;
+			}
+			.attribute {
+			  font-weight: bold;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					{{> header}}
+					
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/aboutUs">About Us</a></li>
+							<li><a href="/myAccount/{{number}}">My Account</a></li>
+							<li><a href="/logout">Sign Out</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+							<h1>{{Name}}</h1>
+							<p><span class="attribute">Price:</span> Php{{Price}}</p>
+							<p><span class="attribute">About This Product:</span> {{Description}}</p>
+							<br>
+							<img src = "../images/food/food.jpg" width="400px" alt=""/></br>
+							<a class="button large" href="/processOrder/{{Name}}">Order</a>
+							<p></p>
+							<h3>More Info</h3>
+							<ul class = "moreinfo">
+  							<li> Home Delivery</li>
+  							<li> Takeaway Available</li>
+							</ul>
+							<hr>
+						</div>
+						
+					
+					
+					<div class = "inner">
+					
+					
+					<section id="comment">
+						<p><span class="attribute">Contact seller for more information!</span></br>
+						{{Seller}}: 0{{ContactNo}}</p>
+
+					</section>
+
+  					</form>
+
+					</div>
+			</div>
+
+				<!-- Footer -->
+					{{> footer}}
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../js/jquery.min.js"></script>
+			<script src="../js/browser.min.js"></script>
+			<script src="../js/breakpoints.min.js"></script>
+			<script src="../js/util.js"></script>
+			<script src="../js/main.js"></script>
+
+	</body>
+</html>
