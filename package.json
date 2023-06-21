@@ -21,7 +21,7 @@
     "express-validator": "^6.11.1",
     "hbs": "^4.1.2",
     "mongo-store": "0.0.2",
-    "mongodb": "^3.6.6",
+    "mongodb": "^3.7.3",
     "mongoose": "^5.12.11",
     "validator": "^13.6.0"
   }

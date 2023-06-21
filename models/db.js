@@ -8,7 +8,7 @@ const Post = require('./PostModel.js');
 
 const Order = require('./OrderModel.js');
 
-const url = 'mongodb+srv://calloy:iRflJUDZSONUO2F4@lapit-users.p8hhp.mongodb.net/test';
+const url = 'mongodb+srv://dbUser:12345@cluster0.dy8siqr.mongodb.net/';
 
 const options = {
     useUnifiedTopology: true,
